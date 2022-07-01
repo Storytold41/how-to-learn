@@ -20,13 +20,13 @@
   width: 228px;
   height: 32px;
   background-image: url(../images/logo_place_header.svg);
-  position: absolute;
-  z-index: 3;
 }
 
 .logo_place_header {
+  position: absolute;
   top: 30px;
   left: 64px;
+  z-index: 3;
 }
 
 .header__title {
@@ -91,7 +91,8 @@
 .two-columns__brief {
   margin: 0;
   padding: 0;
-  max-width: 175px;
+  min-width: 175px;
+  flex-basis: 175px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -108,7 +109,7 @@
   padding: 0;
 }
 
-.two-columns__paragraph {
+.two-columns__paragraph:not(:last-child) {
   margin-top: 0;
   margin-right: 0;
   margin-left: 0;
@@ -261,10 +262,11 @@
 
 .footer {
   display: flex;
+  box-sizing: border-box;
   min-height: 350px;
   background-color: #1f1f1f;
   margin: 0;
-  padding: 0;
+  padding: 60px 0 40px;
 }
 
 .footer__columns {
@@ -313,6 +315,9 @@
 .footer__column_content_copyright {
   flex-basis: 711px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo_place_footer {
@@ -320,18 +325,14 @@
   background-image: url(../images/logo_place_footer.svg);
   margin: 0;
   padding: 0;
-  display: flex;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .footer__author {
-  display: flex;
-  position: absolute;
   bottom: 40px;
   left: 0;
   margin: 18px 0;
-  padding: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
