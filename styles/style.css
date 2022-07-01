@@ -109,11 +109,13 @@
   padding: 0;
 }
 
-.two-columns__paragraph:not(:last-child) {
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 30px;
+.two-columns__paragraph {
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.two-columns__paragraph:last-child {
+  margin: 0;
   padding: 0;
 }
 
@@ -271,7 +273,6 @@
 
 .footer__columns {
   width: 90%;
-  min-height: inherit;
   padding-left: 0;
   box-sizing: border-box;
   margin: 0 auto;
@@ -294,9 +295,8 @@
 
 .footer__column-links {
   list-style-type: none;
-  padding-top: 20px;
-  padding-left: 0;
-  padding-bottom: 16px;
+  margin: 0;
+  padding: 20px 0 16px;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
