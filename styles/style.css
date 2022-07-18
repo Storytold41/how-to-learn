@@ -1,3 +1,21 @@
+@keyframes header-square-animation {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(345deg);
+  }
+}
+
+@keyframes kaufman-triangle-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -14,6 +32,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .logo {
@@ -35,7 +54,7 @@
   padding-left: 64px;
   line-height: 96px;
   font-size: 102px;
-  font-weight: 700;
+  font-weight: 600;
   z-index: 2;
 }
 
@@ -73,6 +92,11 @@
   background-color: #2f80ed;
   right: 0;
   top: 64px;
+  transform: rotate(-15deg);
+  animation-name: header-square-animation;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .description {
@@ -118,7 +142,120 @@
 }
 
 .two-columns__span-accent {
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.technics {
+  padding-top: 100px;
+}
+
+.cards {
+  width: 80%;
+  padding-left: 150px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards__item {
+  width: 240px;
+  margin-top: 60px;
+  margin-right: 100px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-right: 40px;
+  margin-bottom: 43px;
+  margin-left: 40px;
+}
+
+.cards__title {
+  margin-bottom: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cards__description {
+  margin-top: 16px;
+  margin-bottom: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-style: normal;
+  text-align: center;
+}
+
+.video {
+  padding-top: 100px;
+}
+
+.video__iframes {
+  width: 1050px;
+  padding-left: 0;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  list-style-type: none;
+  display: flex;
+}
+
+.video__iframe {
+  margin-right: 20px;
+}
+
+.video__iframe:last-of-type {
+  margin-right: 0;
+}
+
+.oakley {
+  padding-top: 160px;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.feynman {
+  min-height: 790px;
+  padding-top: 100px;
+  position: relative;
+  background-color: #f2f2f2;
+  background-image: url(../images/feynman.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+.feynman__title {
+  max-width: 648px;
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.feynman__subtitle {
+  margin-top: 70px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  color: #2f80ed;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .digits {
@@ -133,7 +270,7 @@
   z-index: 2;
   line-height: 1.15;
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -166,7 +303,7 @@
   margin-bottom: 0;
   line-height: 1.15;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .table__text {
@@ -177,41 +314,75 @@
   font-weight: normal;
 }
 
-.feynman {
-  min-height: 790px;
-  padding-top: 100px;
-  position: relative;
+.khan {
+  padding-top: 105px;
   background-color: #f2f2f2;
-  background-image: url(../images/feynman.png);
-  background-position: bottom left;
-  background-repeat: no-repeat;
 }
 
-.feynman__title {
-  max-width: 648px;
-  margin: 0 auto;
+.khan__container {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.khan__author {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-style: normal;
+}
+
+.khan__title {
+  margin-top: 0;
   line-height: 1.15;
-  font-size: 120px;
-  font-weight: bold;
-  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
 }
 
-.feynman__subtitle {
-  margin-top: 70px;
-  line-height: 51px;
-  font-size: 36px;
-  font-weight: normal;
-  text-align: center;
+.khan__quote {
+  width: 790px;
+  margin-top: 50px;
+  margin-left: 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-style: normal;
 }
 
-.feynman__link {
-  position: absolute;
-  top: 50%;
-  right: 48px;
+.khan__quote-author {
+  margin-top: 36px;
+  margin-bottom: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.khan__quote-author-subline {
+  margin-top: 10px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.khan__book-container {
+  margin-top: 68px;
+  display: flex;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  object-position: top;
+  object-fit: cover;
+}
+
+.khan__buy-link {
+  margin-left: 20px;
+  align-self: flex-start;
   color: #2f80ed;
-  line-height: 51px;
-  font-size: 36px;
-  font-weight: normal;
+  line-height: 42px;
+  font-size: 30px;
+  font-style: normal;
   text-decoration: none;
 }
 
@@ -253,6 +424,27 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  animation-name: kaufman-triangle-animation;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.resources {
+  padding-top: 100px;
+  padding-bottom: 217px;
+}
+
+.resources__logo-zone {
+  width: 1100px;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
 }
 
 .footer {
@@ -283,7 +475,7 @@
   margin-bottom: 0;
   line-height: 30px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .footer__column-links {
@@ -329,4 +521,28 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+}
+
+.section-title__technics,
+.section-title__video {
+  line-height: 1.15;
+}
+
+.header__link_transparent,
+.feinman__link_transparent,
+.khan__buy-link_transparent,
+.resources__link,
+.footer__column-link_transparent {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.header__link_transparent:hover,
+.feinman__link_transparent:hover,
+.khan__buy-link_transparent:hover,
+.resources__link:hover,
+.footer__column-link_transparent:hover {
+  opacity: 0.5;
 }
