@@ -5,9 +5,4 @@
   background-color: #2f80ed;
   right: 0;
   top: 64px;
-  transform: rotate(-15deg);
-  animation-name: header-square-animation;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }

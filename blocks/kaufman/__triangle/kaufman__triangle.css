@@ -9,8 +9,4 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  animation-name: kaufman-triangle-animation;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
